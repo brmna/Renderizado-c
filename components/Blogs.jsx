@@ -9,34 +9,34 @@ const blogs = [
 
   return (
   <>
-  <h1 className="mt-4" >5. Lista de blogs con estructura de datos profundamente
-anidada</h1>
+  <h2 className="mt-6 font-bold mb-4" >5. Lista de blogs con estructura de datos profundamente
+anidada</h2>
     {blogs.map((blog) => (
-      <li className="list-none bg-white w-62 p-2 rounded-xl text-black m-2" key={blog.id}>
-        <p> <strong>Titulo: </strong> {blog.titulo}</p>
+      <li className="list-none bg-white p-4 rounded m-2 my-4 max-w-80 text-black" key={blog.id}>
+        <p className="text-xl font-semibold text-black"> <strong>Titulo: </strong> {blog.titulo}</p>
         <p> <strong>Autor: </strong> {blog.autor.nombre}</p>
 
         {blog.categorias.map((categoria, index) => ( 
-          <div key={index}>
+          <div key={index} className="bg-gray-200 px-2 m-2 rounded-full">
           <p> <strong>Categoría: </strong>{categoria}</p>
           </div>
         ))}
           {blog.comentarios.map((comentario, index) => (
-            <div key={index}>
-              <p> <strong>Comentarios: </strong></p>
+            <div key={index} className="mt-3 bg-gray-100 p-2 rounded border-l-3 border-gray-800">
+              <p className="font-bold mb-1">Comentarios: </p>
               <p> <strong>Usuario: </strong>{comentario.usuario}</p>
               <p> <strong>Texto: </strong>{comentario.texto}</p>
 
               {comentario.respuestas.map((respuesta, index) => (
-                <div key={index}>
-                  <p> <strong>Respuestas:</strong> </p>
+                <div key={index} className="ml-0.5 mt-1.5 bg-white p-2 shadow-sm rounded border border-gray-300">
+                  <p className="font-bold mb-1">Respuestas: </p>
                   <p> <strong>Usuario: </strong> {respuesta.usuario} </p>
                   <p> <strong>Texto: </strong> {respuesta.texto} </p>
 
 
               {respuesta.reacciones.map((reaccion, index) => (
-                <div key={index}>
-                  <p> <strong>Reacciones: </strong> </p>
+                <div key={index} className="ml-0.5 mt-1.5 p-3 rounded bg-white border border-gray-300">
+                  <p className="font-bold mb-1">Reacciones: </p>
                   <p><strong>Tipo: </strong>{reaccion.tipo} </p>
                   <p><strong>Usuario:</strong> {reaccion.usuario.nombre} </p>
                   <p><strong>Rol: </strong>{reaccion.usuario.rol}</p>

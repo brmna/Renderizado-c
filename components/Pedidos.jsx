@@ -8,10 +8,10 @@ const pedidos = [
 ];
   return (
     <>
-    <h2 className="mt-4">4. Lista de pedidos con productos
+    <h2 className="mt-6 font-bold mb-4">4. Lista de pedidos con productos
 </h2>
       {pedidos.map((pedido) => (
-      <li className="list-none bg-white text-black w-45 m-2 p-2 rounded-xl" key={pedido.id}>
+      <li className="list-none bg-white text-black w-45 m-2 p-2 rounded" key={pedido.id}>
         <p> <strong>Cliente:</strong> {pedido.cliente}</p>
         {pedido.productos.map((producto, index) => (
           <div key={index}>

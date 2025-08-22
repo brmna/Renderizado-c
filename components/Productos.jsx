@@ -9,10 +9,10 @@ const productos = [
 
 return (
   <>
-    <h2 className="mt-4">1. Lista de productos con categorías
+    <h2 className="mt-6 font-bold mb-4">1. Lista de productos con categorías
 </h2>
     {productos.map((producto) => (
-      <li className="list-none bg-white text-black flex-c w-60 m-2 rounded-xl p-2" key={producto.id}>
+      <li className="list-none bg-white text-black w-58 m-2 rounded p-2" key={producto.id}>
         <p><strong>Nombre: </strong>{producto.nombre}</p>
         <p> <strong>Precio: </strong> {producto.precio}</p>
         <p> <strong>Categoría: </strong>{producto.categoria.nombre}</p>

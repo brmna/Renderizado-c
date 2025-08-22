@@ -8,9 +8,9 @@ const cursos = [
 ];
 return (
   <>
-  <h2 className="mt-4">3. Lista de cursos con módulos.</h2>
+  <h2 className="mt-6 font-bold mb-4">3. Lista de cursos con módulos.</h2>
   {cursos.map((curso) => (
-      <li className="list-none bg-white w-55 text-black p-2 m-2 rounded-xl" key={curso.id}>
+      <li className="list-none bg-white w-55 text-black p-2 m-2 rounded" key={curso.id}>
         <p> <strong>Nombre:</strong> {curso.nombre}</p>
         {curso.modulos.map((modulo, index) => ( 
           <p key={index}><strong>Modulo: </strong> {modulo.nombre}</p>
